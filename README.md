@@ -19,40 +19,34 @@ This project is a user-facing, chat-style **Retrieval-Augmented Generation (RAG)
 
 ## 🧩 Project Structure
 
+\`\`\`text
 chat_rag_project/
-│
-├── agent/ # LLM agent logic and tool calls
-│ ├── llm_agent.py
-│ ├── tool_schema.py
-│ └── tools.py
-│
-├── api/ # FastAPI web server
-│ └── main.py
-│
-├── data_pipeline/ # Daily data fetch and clean
-│ ├── downloader.py
-│ ├── processor.py
-│ └── run_pipeline.py
-│
-├── db/ # MySQL DB integration
-│ ├── insert_documents.py
-│ ├── mysql_setup.sql
-│ └── query_tools.py
-│
-├── static/ # HTML UI (Bootstrap + JS)
-│ └── index.html
-│
+├── agent/              # LLM agent logic and tool calls
+│   ├── llm_agent.py
+│   ├── tool_schema.py
+│   └── tools.py
+├── api/                # FastAPI web server
+│   └── main.py
+├── data_pipeline/      # Daily data fetch and clean
+│   ├── downloader.py
+│   ├── processor.py
+│   └── run_pipeline.py
+├── db/                 # MySQL DB integration
+│   ├── insert_documents.py
+│   ├── mysql_setup.sql
+│   └── query_tools.py
+├── static/             # HTML UI (Bootstrap + JS)
+│   └── index.html
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-
-
+\`\`\`
 
 ---
 
 ## ⚙️ How to Run
 
-```bash
+\`\`\`bash
 # Create and activate environment
 conda create -n rag_env python=3.10 -y
 conda activate rag_env
@@ -71,23 +65,27 @@ uvicorn api.main:app --reload
 
 # Visit the HTML UI at:
 # http://localhost:8000/static/index.html
+\`\`\`
 
+---
 
+## 🧪 Example Queries
 
-🧪 Example Queries
+\`\`\`text
+List 3 recent documents from Energy Department about clean energy
+Give me a summary of executive orders related to cybersecurity
+Any test procedure updates for central air conditioners?
+\`\`\`
 
-    List 3 recent documents from Energy Department about clean energy
+---
 
-    Give me a summary of executive orders related to cybersecurity
+## 🛠️ Notes
 
-    Any test procedure updates for central air conditioners?
+- **LLM used:** `mistral` from Ollama (`http://localhost:11434`)  
+- **Database:** All document search operations use `aiomysql` async queries  
+- **Tool usage:** Tool results are only returned if used via LLM function calls  
+- **Models:** You can switch to any function-capable model (e.g., `qwen`, `llama3`, etc.)
 
-🛠️ Notes
+---
 
-    LLM used: mistral from Ollama (http://localhost:11434)
-
-    All database calls are async (aiomysql)
-
-    Tool results are hidden from user unless returned via LLM
-
-    You can replace Mistral with any tool-enabled model (e.g., qwen)
+> 🧾 Licensed for educational/demo use.
