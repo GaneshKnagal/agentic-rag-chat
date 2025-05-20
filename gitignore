@@ -1,0 +1,40 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Environment
+.env
+*.env
+.venv/
+env/
+venv/
+rag_env/
+
+# Jupyter/IPython
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+.idea/
+
+# Logs
+*.log
+
+# Data folders
+data/raw/
+data/processed/
+*.sqlite
+
+
+
+
+
+
+
+

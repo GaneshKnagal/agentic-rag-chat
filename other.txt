@@ -1,0 +1,48 @@
+Example: 
+
+Energy-related:- 
+List 3 recent documents from Energy Department about clean energy
+Give me energy conservation updates from Department of Energy
+Any recent test procedure updates for central air conditioners?
+
+
+Agency-specific general checks:-
+What documents were published by the Federal Election Commission this week?
+List documents related to airworthiness from the Federal Aviation Administration
+
+
+Broader keyword coverage:-
+Tell me about tariff changes or trade policy documents recently
+Are there any recent federal documents mentioning disaster or emergency?
+
+
+Cross-validation against known content:-
+Show recent notices related to marine mammals
+
+
+
+
+Test 1 — With query & agency match
+List recent climate change reports from Environmental Protection Agency
+
+
+Test 2 — With only query (no agency)
+What are the latest federal updates about electric vehicles?
+
+
+Test 3 — With uncommon agency name format
+Give me recent marine mammals policy updates from NOAA
+
+
+Test 4 — Common issue test: agency hallucination
+List policies related to student loan forgiveness
+
+
+Test 5 — Specific product regulation
+Show recent updates on air conditioner testing procedures
+
+
+Test 6 — Non-existent combo (to test fallback)
+Give me documents from NASA about cryptocurrency regulation
+
+
