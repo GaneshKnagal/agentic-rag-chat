@@ -1,8 +1,7 @@
 # 🧠 Agentic RAG Chat System
 
-This project is a user-facing, chat-style **Retrieval-Augmented Generation (RAG)** system using a **local LLM (Mistral via Ollama)**. The LLM can use tools like querying a MySQL database containing real-world government documents.
+This project is a user-facing, chat-style **Agentic Retrieval-Augmented Generation (RAG)** system using a **local LLM (Mistral via Ollama)**. The LLM can use tools like querying a MySQL database containing real-world government documents.
 
-👉 **Deployed on Streamlit Cloud**: [Try it here](https://appchatbotpy-erqfvwwsfhcktmbdckxvbu.streamlit.app/)
 
 ![Agentic RAG System Diagram](assets/agentic_rag_system.webp)
 
@@ -22,16 +21,17 @@ This project is a user-facing, chat-style **Retrieval-Augmented Generation (RAG)
 ## 🧩 Project Structure
 
 chat_rag_project/
-│
-├── agent/ # LLM agent logic and tool calls  
+
+
+├── agent/       # LLM agent logic and tool calls  
 │   ├── llm_agent.py  
 │   ├── tool_schema.py  
 │   └── tools.py  
 │
-├── api/ # FastAPI web server  
+├── api/             # FastAPI web server  
 │   └── main.py  
 │
-├── data_pipeline/ # Daily data fetch and clean  
+├── data_pipeline/     # Daily data fetch and clean  
 │   ├── downloader.py  
 │   ├── processor.py  
 │   └── run_pipeline.py  
@@ -41,7 +41,7 @@ chat_rag_project/
 │   ├── mysql_setup.sql  
 │   └── query_tools.py  
 │
-├── static/ # HTML UI (Bootstrap + JS)  
+├── static/            # HTML UI (Bootstrap + JS)  
 │   └── index.html  
 │
 ├── .gitignore  
